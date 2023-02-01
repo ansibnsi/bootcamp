@@ -3,4 +3,4 @@ const greet = (name) => {
     return greeting;
 
 }
-console.log(greet("anas"));
+console.log(greet("adeel"));
