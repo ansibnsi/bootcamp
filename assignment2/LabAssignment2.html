@@ -1,0 +1,30 @@
+<html>
+  <head>
+  <script type="text/javascript">
+    function findMinMax(){
+      //get the value from the input field
+      var inputString = document.getElementById("numbers").value;
+      //split the string by ',' into an array
+      var inputArray = inputString.split(',');
+      //sort the array so that smallest values are first
+      inputArray.sort(function(a, b){return a-b});
+      //get the min and max values
+      var min = inputArray[0];
+      var max = inputArray[inputArray.length-1];
+
+      //print the min and max values to the screen
+      document.getElementById("min").innerHTML = min;
+      document.getElementById("max").innerHTML = max;
+    }
+  </script>
+  </head>
+  <body>
+    <src="LabAssignment2.js"></src>
+    <h2>Find the min and max value from an array of numbers</h2>
+    <p>Enter a list of numbers, separated by commas:</p>
+    <input type="text" id="numbers" />
+    <button onclick="findMinMax()">Find min and max</button>
+    <p>Min: <span id="min"></span></p>
+    <p>Max: <span id="max"></span></p>
+  </body>
+</html>
