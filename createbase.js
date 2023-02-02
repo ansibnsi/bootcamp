@@ -1,7 +1,10 @@
-function sum (){
-var num1 = prompt('Enter the number ');
-var num2 = 6;
-function sum1 ( num1, num2);
+function createBase(baseNumber) {
+    return function (numberToAdd) {
+        return baseNumber + numberToAdd;
+    }
 }
-//return sum1();
-console.log(num1 + num2);
+
+var addSix = createBase(6);
+
+console.log(addSix(10)); 
+console.log(addSix(21));
